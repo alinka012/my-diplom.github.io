@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторні</title>
+    
+    
+</head>
+<style>
+  nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #003366;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.nav-menu {
+  list-style: none;
+  margin: 0;
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.nav-menu li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 14px;
+  transition: background 0.2s;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+  }
+  nav a:hover {
+    background-color: #3399ff;
+  }
+  
+body {
+  margin: 0;
+  padding-top: 60px; /* висота меню */
+  font-family: Arial, sans-serif;
+}
+
+footer {
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+.lab-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .lab-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    padding: 20px;
+    
+  }
+  
+  .lab-card h3 {
+    margin-top: 0;
+    color: #4b0082;
+  }
+  
+  .lab-button {
+    display: inline-block;
+    /* margin-top: 0px; */
+    background: #004a80;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+  }
+  
+  .button-cont {
+padding-bottom: 0px; 
+
+}
+.burger {
+  display: none;
+  font-size: 26px;
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+@media (max-width: 1000px) {
+  .burger {
+    z-index: 20;
+    display: block;
+    position: fixed;
+    top: 15px;
+    right: 20px;
+    
+    background: #002244;
+    padding: 8px 12px;
+    border-radius: 6px;
+    color: white;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .nav-menu li a {
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  body {
+    padding-top: 140px; /* увеличено из-за вертикального меню */
+  }
+
+  .lab-grid {
+    grid-template-columns: 1fr; /* одна колонка */
+    padding: 20px 10px;
+  }
+
+  .lab-card {
+    padding: 15px;
+  }
+
+  .lab-card h3 {
+    font-size: 18px;
+  }
+
+  .lab-button {
+    display: block;
+    width: 50%;
+    text-align: center;
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    background-color: #003366;
+    position: absolute;
+    top: 60px;
+    width: 100%;
+    left: 0;
+    padding: 10px 0;
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  body {
+    padding-top: 60px;
+  }
+
+}
+
+
+</style>
+
+<body>
+  <header>
+    <nav>
+      <div class="nav-container">
+        <div class="burger" onclick="toggleMenu()">☰</div> 
+      <ul class="nav-menu">
+        <li><a href="index.html">Головна</a></li>
+        <li><a href="програма дисципліни/kiberbezpeka.html">Програма дисципліни</a></li>
+        <li><a href="laction/laction.html">Лекції</a></li>
+        <li><a href="lab.html">Лабораторні</a></li>
+        <li><a href="saminar.html">Семінари</a></li>
+        <li><a href="sr.html">Самостійні</a></li>
+        <li><a href="pz.html">ПЗ</a></li>
+  </ul>
+</div>
+</nav>
+</header>
+
+    <section id="labs" style="padding: 30px; background-color: #f5f9fc;">
+        <h2 style="color: #003366; text-align: center; margin-bottom: 30px;">Лабораторні роботи</h2>
+      
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
+      
+            <div class="lab-grid">
+                <div class="lab-card">
+                  <h3>Лабораторна №1</h3>
+                  <p><strong>Тема:</strong> Розробка презентацій в середовищі програми PowerPoint</p>
+                  <p><strong>Мета:</strong> ознайомитися з  програмою створення презентацій  PowerPoint;  навчитися 
+                    створювати і налагоджувати презентації. </p>
+                    <a href="lab/lab1.html" class="lab-button">Завдання</a>
+                </div>
+    
+
+                    <div class="lab-card">
+                      <h3>Лабораторна №2</h3>
+                      <p><strong>Тема:</strong> Створення публікацій в середовищі програми Publisher: буклет</p>
+                      <p><strong>Мета:</strong> ознайомитися з  програмою створення публікацій Publisher;  навчитися 
+                        створювати і налагоджувати публікації.</p>
+                        <a href="lab/lab2.html" class="lab-button">Завдання</a>
+                      </div>
+
+                    <div class="lab-card">
+                        <h3>Лабораторна №3</h3>
+                        <p><strong>Тема:</strong> Створення публікацій в середовищі програми Publisher: бюлетень</p>
+                        <p><strong>Мета:</strong> ознайомитися з  програмою створення публікацій Publisher;  навчитися 
+                          створювати і налагоджувати публікації.</p>
+                          <a href="lab/lab3.html" class="lab-button">Завдання</a>
+                      </div>
+
+
+                      <div class="lab-card">
+                        <h3>Лабораторна №4</h3>
+                        <p><strong>Тема:</strong> Перегляд гіпертекстових HTML-документів. </p>
+                        <p><strong>Мета:</strong> навчитися 
+                            налагоджувати й використовувати для перегляду програму-переглядач Web-сторінок.  </p>
+                            <a href="lab/lab4.html" class="lab-button">Завдання</a>
+                      </div>
+
+                      <div class="lab-card">
+                        <h3>Лабораторна №5</h3>
+                        <p><strong>Тема: </strong> Пошук інформації в Інтернеті.</p>
+                        <p><strong>Мета:</strong> ознайомитися з  методикою  пошуку  необхідних  даних,  використовуючи пошукові системи Інтернету,  ознайомитися з класифікацією пошукових систем Інтернету.</p>
+                        <a href="lab/lab5.html" class="lab-button">Завдання</a>
+                      </div>
+
+                      <div class="lab-card">
+                        <h3>Лабораторна №6</h3>
+                        <p><strong>Тема:</strong> Порівняння даних за допомогою хешу. </p>
+                        <p><strong>Мета:</strong> Використати програму хешування для перевірки цілісності даних.</p>
+                        <a href="lab/lab6.html" class="lab-button">Завдання</a>
+                      </div>
+
+                      <div class="lab-card">
+                        <h3>Лабораторна №7</h3>
+                        <p><strong>Тема:</strong> Етика в кібербезпеці</p>
+                        <p><strong>Мета:</strong> Засвоїти етичні норми і кібербезпеці. </p>
+                        <a href="lab/lab7.html" class="lab-button">Завдання</a>
+                      </div>
+
+                      <div class="lab-card">
+                        <h3>Лабораторна №8</h3>
+                        <p><strong>Тема:</strong> Що було зроблено? </p>
+                        <p><strong>Мета:</strong> Знайти інформацію та прочитати про деякі нещодавні порушення безпеки. </p>
+                        <a href="lab/lab8.html" class="lab-button">Завдання</a>
+                      </div>
+
+                      <div class="lab-card">
+                        <h3>Лабораторна №9</h3>
+                        <p><strong>Тема:</strong> Пошук вразливостей безпеки </p>
+                        <p><strong>Мета:</strong> Дослідити дії в Інтернеті, що можуть бути вразливими для кібербезпеки. </p>
+                        <a href="lab/lab9.html" class="lab-button">Завдання</a>
+                      </div>
+
+                      <div class="lab-card">
+                        <h3>Лабораторна №10</h3>
+                        <p><strong>Тема:</strong> Вразливості систем кібербезпеки  </p>
+                        <p><strong>Мета:</strong> Навчитися визначати типи вразливостей систем кібербезпеки.  </p>
+                        <a href="lab/lab10.html" class="lab-button">Завдання</a>
+                      </div>
+
+                      <div class="lab-card">
+                        <h3>Лабораторна №11</h3>
+                        <p><strong>Тема:</strong> Створення та збереження надійних 
+                          паролей</p>
+                        <p><strong>Мета:</strong> Зрозуміти концепцію надійного пароля ... </p>
+                        <a href="lab/lab11.html" class="lab-button">Завдання</a>
+                      </div>
+
+                      <div class="lab-card">
+                        <h3>Лабораторна №12</h3>
+                        <p><strong>Тема:</strong> Резервне копіювання даних до 
+                          зовнішнього сховища </p>
+                        <p><strong>Мета:</strong> Резервне копіювання даних користувача...</p>
+                        <a href="lab/lab12.html" class="lab-button">Завдання</a>
+                      </div>
+
+                      <div class="lab-card">
+                        <h3>Лабораторна №13</h3>
+                        <p><strong>Тема:</strong> Хто володіє Вашими даними?   </p>
+                        <p><strong>Мета:</strong> Дослідіть яким є право власності на Ваші дані, якщо вони зберігаються не в локальній системі. </p>
+                        <a href="lab/lab13.html" class="lab-button">Завдання</a>
+                      </div>
+
+                      <div class="lab-card">
+                        <h3>Лабораторна №14</h3>
+                        <p><strong>Тема:</strong> Дослідіть ризики своєї поведінки в 
+                          Інтернеті </p>
+                        <p><strong>Мета:</strong> Дослідити дії в Інтернеті, що можуть скомпрометувати вашу безпеку чи конфіденційність. </p>
+                        <a href="lab/lab14.html" class="lab-button">Завдання</a>
+                      </div>
+
+
+                      <div class="lab-card">
+                        <h3>Лабораторна №15</h3>
+                        <p><strong>Тема:</strong>  Пристрої безпеки. Захист від шкідливого 
+                          ПЗ </p>
+                        <p><strong>Мета:</strong> Навчитися виконувати захист від шкідливого ПЗ і вивчити класифікацію пристроїв безпеки..  </p>
+                        <a href="lab/lab15.html" class="lab-button">Завдання</a>
+                      </div>
+
+
+                      <div class="lab-card">
+                        <h3>Лабораторна №16</h3>
+                        <p><strong>Тема:</strong> Дослідження інструментів захисту</p>
+                        <p><strong>Мета:</strong> Дослідити інструменти захисту організації </p>
+                        <a href="lab/lab16.html" class="lab-button">Завдання</a>
+                      </div>
+
+                      <div class="lab-card">
+                        <h3>Лабораторна №17</h3>
+                        <p><strong>Тема:</strong> Характеристика і типова схема функціонування інноваційних систем </p>
+                        <p><strong>Мета:</strong>  проаналізувати принципи роботи, приклади використання та визначити переваги використання  новітніх інформаційних технологій.  </p>
+                        <a href="lab//lab17.html" class="lab-button">Завдання</a>
+                      </div>
+
+                      <div class="lab-card">
+                        <h3>Лабораторна №18</h3>
+                        <p><strong>Тема:</strong> Дослідження систем штучного інтелекту</p>
+                        <p><strong>Мета:</strong> проаналізувати принципи роботи, приклади використання та визначити переваги використання  
+                            систем штучного інтелекту. </p>
+                            <a href="lab/lab18.html" class="lab-button">Завдання</a>
+                      </div>
+            </div>
+        </div>
+      </section>
+      <footer>
+        &copy; 2025 Електронний підручник з кібербезпеки.
+    </footer>
+    <script>
+      function toggleMenu() {
+        const menu = document.querySelector('.nav-menu');
+        menu.classList.toggle('active');
+      }
+    </script>
+    
+</body>
+</html>

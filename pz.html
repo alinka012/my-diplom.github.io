@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Програмне забезпечення</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+  <style>
+
+   html, body {
+      height: 100%;
+      margin: 0;
+    }
+
+    nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #003366;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.nav-menu {
+  list-style: none;
+  margin: 0;
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.nav-menu li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 14px;
+  transition: background 0.2s;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+  }
+  nav a:hover {
+    background-color: #3399ff;
+  }
+
+body {
+  margin: 0;
+  padding-top: 60px; /* висота меню */
+  font-family: Arial, sans-serif;
+}
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      background-color: #f5f7fb;
+    }
+
+    .wrapper {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background-color: #003366;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 26px;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .software-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    .software-card {
+      display: flex;
+      align-items: center;
+      background: linear-gradient(to right, #ffffff, #eef2ff);
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      transition: transform 0.2s ease;
+    }
+
+    .software-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .software-card img {
+      width: 64px;
+      height: 64px;
+      margin-right: 20px;
+    }
+
+    .software-info h3 {
+      margin: 0;
+      color: #003366;
+    }
+
+    .software-info p {
+      margin: 8px 0;
+      color: #333;
+    }
+
+    .software-info a {
+      color: #4b0082;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    footer {
+      background-color: #003366;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      font-size: 14px;
+    }
+    .burger {
+  display: none;
+  font-size: 26px;
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+@media (max-width: 1000px) {
+  .burger {
+    z-index: 20;
+    display: block;
+    position: fixed;
+    top: 15px;
+    right: 20px;
+    
+    background: #002244;
+    padding: 8px 12px;
+    border-radius: 6px;
+    color: white;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .nav-menu li a {
+    padding: 10px;
+    font-size: 16px;
+  }
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    background-color: #003366;
+    position: absolute;
+    top: 60px;
+    width: 100%;
+    left: 0;
+    padding: 10px 0;
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+
+  .nav-menu li a {
+    padding: 10px;
+    font-size: 16px;
+  }
+}
+
+
+
+  </style>
+</head>
+<body>
+    <div class="wrapper">
+        
+  <header>
+    <h1>Програмне забезпечення, використане у проєкті</h1>
+  
+      <nav>
+        <div class="burger" onclick="toggleMenu()">☰</div>
+        <ul class="nav-menu">
+          <li><a href="index.html">Головна</a></li>
+          <li><a href="програма дисципліни/kiberbezpeka.html">Програма дисципліни</a></li>
+          <li><a href="action/laction.html">Лекції</a></li>
+          <li><a href="lab.html">Лабораторні</a></li>
+          <li><a href="saminar.html">Семінари</a></li>
+          <li><a href="sr.html">Самостійні</a></li>
+          <li><a href="pz.html">ПЗ</a></li>
+    </ul>
+  </nav>
+
+  </header>
+
+  <main>
+    <div class="software-grid">
+
+      <div class="software-card">
+        <img src="фото/figma.png" alt="Figma">
+        <div class="software-info">
+          <h3>Figma</h3>
+          <p>Графічний редактор для створення макетів сайту.</p>
+          <a href="https://figma.com" target="_blank">Перейти</a>
+        </div>
+      </div>
+
+      <div class="software-card">
+        <img src="фото/VS.png" alt="VS Code">
+        <div class="software-info">
+          <h3>Visual Studio Code</h3>
+          <p>Редактор коду для HTML, CSS, JS з автозавершенням.</p>
+          <a href="https://code.visualstudio.com" target="_blank">Перейти</a>
+        </div>
+      </div>
+
+      <div class="software-card">
+        <img src="фото/googleslides.png" alt="Google Slides">
+        <div class="software-info">
+          <h3>Google Slides</h3>
+          <p>Презентації лекцій, вставлені у вигляді iframe.</p>
+          <a href="https://slides.google.com" target="_blank">Перейти</a>
+        </div>
+      </div>
+
+      <div class="software-card">
+        <img src="фото/pdf.png" alt="PDF">
+        <div class="software-info">
+          <h3>PDF-інструменти</h3>
+          <p>Конвертація звітів та презентацій у PDF-формат.</p>
+          <a href="https://www.ilovepdf.com" target="_blank">Перейти</a>
+        </div>
+      </div>
+
+      <div class="software-card">
+        <img src="фото/google.png" alt="Google Chrome">
+        <div class="software-info">
+          <h3>Google Chrome</h3>
+          <p>Пошук інформації.</p>
+          <a href="https://www.google.com.ua/?client=safari&channel=iphone_bm" target="_blank">Перейти</a>
+        </div>
+      </div>
+   
+      <div class="software-card">
+        <img src="фото/chatgpt.png" alt="Chat GPT">
+        <div class="software-info">
+          <h3>Chat GPT</h3>
+          <p>Більш інформатівної інформації. Редагування коду.</p>
+          <a href="https://www.google.com.ua/url?sa=t&source=web&rct=j&opi=89978449&url=https://chatgpt.com/g/g-mzFm1dKjW-chat&ved=2ahUKEwiy68uNgtiNAxV-1QIHHVJnG74QFnoECAkQAQ&usg=AOvVaw2WKVnJow_qq8KjxPIUP-no" target="_blank">Перейти</a>
+        </div>
+      </div>
+
+
+      <div class="software-card">
+        <img src="фото/png.png" alt="png">
+        <div class="software-info">
+          <h3>PNG</h3>
+          <p>Збереження іконок у pdf форматі.</p>
+          <a href="https://www.pngwing.com/ru" target="_blank">Перейти</a>
+        </div>
+      </div>
+
+
+      <div class="software-card">
+        <img src="фото/word.png" alt="png">
+        <div class="software-info">
+          <h3>Microsoft Word</h3>
+          <p>Запис створення проєкту. Редагування тексту.</p>
+          <a href="https://www.pngwing.com/ru" target="_blank">Перейти</a>
+        </div>
+      </div>
+
+
+    </div>
+  </main>
+
+</div>
+
+<footer>
+    &copy; 2025 Електронний підручник з кібербезпеки — Розроблено в межах дипломного проєкту
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.querySelector('.nav-menu');
+      menu.classList.toggle('active');
+    }
+  </script>
+
+</body>
+
+</html>

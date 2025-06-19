@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Семінари</title>
+  <style>
+    body {
+      margin: 0;
+      padding-top: 60px;
+      font-family: Arial, sans-serif;
+      background-color: #f0f4f8;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #003366;
+      z-index: 1000;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    .nav-menu {
+      list-style: none;
+      margin: 0;
+      padding: 10px 0;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .nav-menu li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 8px 14px;
+      transition: background 0.2s;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+    }
+
+    nav a:hover {
+      background-color: #3399ff;
+    }
+
+    .burger {
+      display: none;
+      font-size: 26px;
+      color: white;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+
+    footer {
+      background-color: #003366;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+      font-size: 14px;
+    }
+
+    .seminar-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      padding: 40px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .seminar-card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      padding: 20px;
+    }
+
+    .seminar-card h3 {
+      margin-top: 0;
+      color: #4b0082;
+    }
+
+    .seminar-button {
+      display: inline-block;
+      background: #4b0082;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+
+    .seminar-button:hover {
+      background: #5e2a94;
+    }
+
+    @media (max-width: 1000px) {
+      .burger {
+        z-index: 20;
+        display: block;
+        position: fixed;
+        top: 15px;
+        right: 20px;
+        background: #002244;
+        padding: 8px 12px;
+        border-radius: 6px;
+        color: white;
+      }
+
+      .nav-menu {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        background-color: #003366;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        padding: 10px 0;
+        gap: 10px;
+      }
+
+      .nav-menu.active {
+        display: flex;
+      }
+
+      body {
+        padding-top: 140px;
+      }
+
+      .seminar-grid {
+        grid-template-columns: 1fr;
+        padding: 20px 10px;
+      }
+
+      .seminar-card h3 {
+        font-size: 18px;
+      }
+
+      .seminar-button {
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <div class="nav-container">
+      <div class="burger" onclick="toggleMenu()">☰</div>
+      <ul class="nav-menu">
+        <li><a href="index.html">Головна</a></li>
+        <li><a href="програма дисципліни/kiberbezpeka.html">Програма дисципліни</a></li>
+        <li><a href="laction/laction.html">Лекції</a></li>
+        <li><a href="lab.html">Лабораторні</a></li>
+        <li><a href="aminar.html">Семінари</a></li>
+        <li><a href="sr.html">Самостійні</a></li>
+        <li><a href="pz.html">ПЗ</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<section>
+  <h2 style="color: #003366; text-align: center; margin-top: 30px;">Семінарські заняття</h2>
+
+  <div class="seminar-grid">
+    <div class="seminar-card">
+      <h3>Семінар №1</h3>
+      <p><strong>Тема:</strong> Презентація діяльності та публікації</p>
+      <p><strong>Мета:</strong> Узагальнення і систематизація знань з теми семінару.</p>
+      <a href="Семінари pdf/saminar1.html" class="seminar-button">Завдання семінару</a>
+    </div>
+
+    <div class="seminar-card">
+      <h3>Семінар №2</h3>
+      <p><strong>Тема:</strong> Комп’ютерна мережа Інтернет: програми оглядачі, електронна пошта, сервіси</p>
+      <p><strong>Мета:</strong> Аналіз сценаріїв + обговорення методів захисту.</p>
+      <a href="Семінари pdf/saminar2.html" class="seminar-button">Завдання семінару</a>
+    </div>
+
+    <div class="seminar-card">
+      <h3>Семінар №3</h3>
+      <p><strong>Тема:</strong> Кіберзагрози на прикладах</p>
+      <p><strong>Мета:</strong> Презентації студентів + обговорення.</p>
+      <a href="Семінари pdf/saminar3.html" class="seminar-button">Завдання семінару</a>
+    </div>
+
+    <div class="seminar-card">
+      <h3>Семінар №4</h3>
+      <p><strong>Тема:</strong> Найкращі практики кібербезпеки</p>
+      <p><strong>Мета:</strong> Узагальнення і систематизація знань з теми семінару.</p>
+      <a href="Семінари pdf/saminar4.html" class="seminar-button">Завдання семінару</a>
+    </div>
+
+    <div class="seminar-card">
+      <h3>Семінар №5</h3>
+      <p><strong>Тема:</strong> Новітні комп’ютерні технології. Підсумкове заняття</p>
+      <p><strong>Мета:</strong> Узагальнення і систематизація знань з теми семінару.</p>
+      <a href="Семінари pdf/saminar5.html" class="seminar-button">Завдання семінару</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2025 Електронний підручник з кібербезпеки</p>
+</footer>
+
+<script>
+  function toggleMenu() {
+    const menu = document.querySelector('.nav-menu');
+    menu.classList.toggle('active');
+  }
+</script>
+
+</body>
+</html>

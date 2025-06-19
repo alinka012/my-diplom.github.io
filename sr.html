@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Самостійні роботи</title>
+
+</head>
+
+<style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-color: #f0f4f8;
+        }
+        header {
+            background-color: #003366;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #003366;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+  }
+  nav a:hover {
+    background-color: #3399ff;
+  }
+
+.nav-menu {
+  list-style: none;
+  margin: 0;
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.nav-menu li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 14px;
+  transition: background 0.2s;
+}
+footer {
+      background-color: #003366;
+      color: white;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    .burger {
+  display: none;
+  font-size: 26px;
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+@media (max-width: 1000px) {
+  .burger {
+    z-index: 20;
+    display: block;
+    position: fixed;
+    top: 15px;
+    right: 20px;
+    background: #002244;
+    padding: 8px 12px;
+    border-radius: 6px;
+    color: white;
+  }
+
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    background-color: #003366;
+    position: absolute;
+    top: 60px;
+    width: 100%;
+    left: 0;
+    padding: 10px 0;
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+
+  .nav-menu li a {
+    padding: 10px;
+    font-size: 16px;
+  }
+
+}
+
+</style>
+
+<body>
+  <header>
+    <nav>
+      <div class="burger" onclick="toggleMenu()">☰</div>
+      <ul class="nav-menu">
+        <li><a href="index.html">Головна</a></li>
+        <li><a href="програма дисципліни/kiberbezpeka.html">Програма дисципліни</a></li>
+        <li><a href="laction/laction.html">Лекції</a></li>
+        <li><a href="lab.html">Лабораторні</a></li>
+        <li><a href="saminar.html">Семінари</a></li>
+        <li><a href="sr.html">Самостійні</a></li>
+        <li><a href="pz.html">ПЗ</a></li>
+  </ul>
+</nav>
+</header>
+
+<section class="wrapper" id="self-study" style="padding: 30px; background-color: #fffef5;">
+    <h2 style="color: #664400; text-align: center; margin-bottom: 30px;">Самостійні роботи</h2>
+  
+    <p style="max-width: 700px; margin: 0 auto 20px; color: #333333; text-align: center;">
+      У цьому розділі подано перелік тем для самостійного вивчення. Кожне завдання супроводжується коротким описом.
+    </p>
+  
+    <div style="max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; gap: 25px;">
+        
+      <!-- Самостійна робота 1
+      <div style="background: #ffffff; border-left: 5px solid #ffcc00; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
+        <h3 style="margin: 0 0 10px; color: #332200;">Самостійна робота №1</h3>
+        <p>Сучасні комп’ютерні технології в проєктній діяльності</p>
+        <div style="background: #eee; border-radius: 4px; overflow: hidden; height: 12px; margin-top: 10px;">
+          <div style="width: 60%; background: #ffcc00; height: 100%;"></div>
+        </div>
+      </div> -->
+      <section id="self-study">
+      
+          <!-- Картка самостійної роботи -->
+          <div style="background: #ffffff; border-left: 5px solid #ffcc00; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
+
+          <a href="Самостійні роботи/sr1.html"
+          style="
+            display: block;
+            text-decoration: none;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            transition: transform 0.2s ease;
+            color: inherit;
+          " onmouseover="this.style.transform='scale(1.01)'" onmouseout="this.style.transform='scale(1)'">
+            <h3 style="margin-bottom: 8px; color: #003366;">Самостійна робота №1</h3>
+            <p style="margin: 0; color: #555;">Тема: Основи захисту інформації в комп’ютерних системах</p>
+            
+          </a>
+        </div>
+    </section>
+
+
+    <section id="self-study">
+        <div style="background: #ffffff; border-left: 5px solid #ffcc00; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
+
+        <a href="Самостійні роботи/sr2.html" style="
+          display: block;
+          text-decoration: none;
+          box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+          transition: transform 0.2s ease;
+          color: inherit;
+        " onmouseover="this.style.transform='scale(1.01)'" onmouseout="this.style.transform='scale(1)'">
+          <h3 style="margin-bottom: 8px; color: #003366;">Самостійна робота №2</h3>
+          <p style="margin: 0; color: #555;">Тема: Основні функції та можливості програми PowerPoint.</p>
+        </a>
+      </div>
+  </section>
+
+  <section id="self-study">
+    <div style="background: #ffffff; border-left: 5px solid #ffcc00; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
+
+    <a href="Самостійні роботи/sr3.html"  style="
+      display: block;
+      text-decoration: none;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      transition: transform 0.2s ease;
+      color: inherit;
+    " onmouseover="this.style.transform='scale(1.01)'" onmouseout="this.style.transform='scale(1)'">
+      <h3 style="margin-bottom: 8px; color: #003366;">Самостійна робота №3</h3>
+      <p style="margin: 0; color: #555;">Тема: Типи макетів публікацій в середовищі програми Publisher.</p>
+    </a>
+  </div>
+</section>
+
+<section id="self-study">
+    <div style="background: #ffffff; border-left: 5px solid #ffcc00; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
+
+    <a href="Самостійні роботи/sr4.html" style="
+      display: block;
+      text-decoration: none;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      transition: transform 0.2s ease;
+      color: inherit;
+    " onmouseover="this.style.transform='scale(1.01)'" onmouseout="this.style.transform='scale(1)'">
+      <h3 style="margin-bottom: 8px; color: #003366;">Самостійна робота №4</h3>
+      <p style="margin: 0; color: #555;">Тема: Локальні комп’ютерні мережі: технології.</p>
+    </a>
+  </div>
+</section>
+    
+<section id="self-study">
+    <div style="background: #ffffff; border-left: 5px solid #ffcc00; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
+
+    <a href="Самостійні роботи/sr5.html" style="
+      display: block;
+      text-decoration: none;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      transition: transform 0.2s ease;
+      color: inherit;
+    " onmouseover="this.style.transform='scale(1.01)'" onmouseout="this.style.transform='scale(1)'">
+      <h3 style="margin-bottom: 8px; color: #003366;">Самостійна робота №5</h3>
+      <p style="margin: 0; color: #555;">Тема: Характеристики оновних сервісів мережі Інтернет.</p>
+    </a>
+  </div>
+</section>
+
+
+<section id="self-study">
+  <div style="background: #ffffff; border-left: 5px solid #ffcc00; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
+
+  <a href="Самостійні роботи/sr6.html" style="
+    display: block;
+    text-decoration: none;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease;
+    color: inherit;
+  " onmouseover="this.style.transform='scale(1.01)'" onmouseout="this.style.transform='scale(1)'">
+    <h3 style="margin-bottom: 8px; color: #003366;">Самостійна робота №6</h3>
+    <p style="margin: 0; color: #555;">Тема: Наслідки порушення кібербезпеки.</p>
+  </a>
+</div>
+</section>
+
+<section id="self-study">
+  <div style="background: #ffffff; border-left: 5px solid #ffcc00; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
+
+  <a href="Самостійні роботи/sr7.html"  style="
+    display: block;
+    text-decoration: none;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease;
+    color: inherit;
+  " onmouseover="this.style.transform='scale(1.01)'" onmouseout="this.style.transform='scale(1)'">
+    <h3 style="margin-bottom: 8px; color: #003366;">Самостійна робота №7</h3>
+    <p style="margin: 0; color: #555;">Тема: Особисті та корпоративні дані. Технології зберігання.</p>
+  </a>
+</div>
+</section>
+
+<section id="self-study">
+  <div style="background: #ffffff; border-left: 5px solid #ffcc00; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
+
+  <a href="Самостійні роботи/sr8.html"  style="
+    display: block;
+    text-decoration: none;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease;
+    color: inherit;
+  " onmouseover="this.style.transform='scale(1.01)'" onmouseout="this.style.transform='scale(1)'">
+    <h3 style="margin-bottom: 8px; color: #003366;">Самостійна робота №8</h3>
+    <p style="margin: 0; color: #555;">Тема: Типи зловмисного програмного забезпечення .</p>
+  </a>
+</div>
+</section>
+
+<section id="self-study">
+  <div style="background: #ffffff; border-left: 5px solid #ffcc00; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
+
+  <a href="Самостійні роботи/sr9.html" style="
+    display: block;
+    text-decoration: none;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease;
+    color: inherit;
+  " onmouseover="this.style.transform='scale(1.01)'" onmouseout="this.style.transform='scale(1)'">
+    <h3 style="margin-bottom: 8px; color: #003366;">Самостійна робота №9</h3>
+    <p style="margin: 0; color: #555;">Тема: Шифрування даних.</p>
+  </a>
+</div>
+</section>
+
+
+<section id="self-study">
+  <div style="background: #ffffff; border-left: 5px solid #ffcc00; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
+
+  <a href="Самостійні роботи/sr10.html"  style="
+    display: block;
+    text-decoration: none;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease;
+    color: inherit;
+  " onmouseover="this.style.transform='scale(1.01)'" onmouseout="this.style.transform='scale(1)'">
+    <h3 style="margin-bottom: 8px; color: #003366;">Самостійна робота №10</h3>
+    <p style="margin: 0; color: #555;">Тема: Принципи автентифікації.</p>
+  </a>
+</div>
+</section>
+
+
+<section id="self-study">
+  <div style="background: #ffffff; border-left: 5px solid #ffcc00; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
+
+  <a href="Самостійні роботи/sr11.html"style="
+    display: block;
+    text-decoration: none;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease;
+    color: inherit;
+  " onmouseover="this.style.transform='scale(1.01)'" onmouseout="this.style.transform='scale(1)'">
+    <h3 style="margin-bottom: 8px; color: #003366;">Самостійна робота №11</h3>
+    <p style="margin: 0; color: #555;">Тема: Сценарії захисту організацій.</p>
+  </a>
+</div>
+</section>
+
+<section id="self-study">
+  <div style="background: #ffffff; border-left: 5px solid #ffcc00; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
+
+  <a href="Самостійні роботи/sr12.html"style="
+    display: block;
+    text-decoration: none;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease;
+    color: inherit;
+  " onmouseover="this.style.transform='scale(1.01)'" onmouseout="this.style.transform='scale(1)'">
+    <h3 style="margin-bottom: 8px; color: #003366;">Самостійна робота №12</h3>
+    <p style="margin: 0; color: #555;">Тема: Підхід до кібербезпеки на основі поведінки.</p>
+  </a>
+</div>
+</section>
+
+
+<section id="self-study">
+  <div style="background: #ffffff; border-left: 5px solid #ffcc00; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
+
+  <a href="Самостійні роботи/sr13.html"  style="
+    display: block;
+    text-decoration: none;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease;
+    color: inherit;
+  " onmouseover="this.style.transform='scale(1.01)'" onmouseout="this.style.transform='scale(1)'">
+    <h3 style="margin-bottom: 8px; color: #003366;">Самостійна робота №13</h3>
+    <p style="margin: 0; color: #555;">Тема: Дерево прийняття рішень з етики на прикладі CISCO.</p>
+  </a>
+</div>
+</section>
+
+<section id="self-study">
+  <div style="background: #ffffff; border-left: 5px solid #ffcc00; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
+
+  <a href="Самостійні роботи/sr14.html"  style="
+    display: block;
+    text-decoration: none;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease;
+    color: inherit;
+  " onmouseover="this.style.transform='scale(1.01)'" onmouseout="this.style.transform='scale(1)'">
+    <h3 style="margin-bottom: 8px; color: #003366;">Самостійна робота №14</h3>
+    <p style="margin: 0; color: #555;">Тема: Технології штучного інтелекту.</p>
+  </a>
+</div>
+</section>
+  
+</section>
+
+  <footer style="background-color: #003366;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  position: relative;
+  bottom: 0;
+  width: 100%;"> 
+  <p>&copy; 2025 Електронний підручник з кібербезпеки</p>
+  <div id="footer-container"></div>
+</footer>
+
+
+</body>
+</html>

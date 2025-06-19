@@ -1,0 +1,153 @@
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Кібербезпека (Технології) – Робоча програма</title>
+ 
+
+    <style>
+         nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #003366;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+h1 {
+  padding-top: 30px;
+}
+.nav-menu {
+  list-style: none;
+  margin: 0;
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+  }
+  nav a:hover {
+    background-color: #3399ff;
+  }
+.nav-menu li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 14px;
+  transition: background 0.2s;
+}
+
+
+
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            background-color: #003366;
+            color: white;
+            padding: 20px 30px;
+            text-align: center;
+            z-index: 1;
+        }
+
+        main {
+            flex: 1;
+            padding: 20px;
+            background-color: #f0f4f9;
+        }
+        iframe {
+            width: 100%;
+            height: 90vh;
+            border: none;
+        }
+        footer {
+            background-color: #003366;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        .burger {
+  display: none;
+  font-size: 26px;
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+@media (max-width: 1000px) {
+  .burger {
+    display: block;
+  }
+
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    background-color: #003366;
+    position: absolute;
+    top: 100px;
+    width: 100%;
+    left: 0;
+    padding: 10px 0;
+    margin-top: 60px;
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+}
+
+
+    </style>
+</head>
+<body>
+
+  <header>
+    <h1>Кібербезпека (Технології)</h1>
+    <p>Робоча програма дисципліни</p>
+</header>
+            <nav>
+              
+              <div class="burger" onclick="toggleMenu()">☰</div>
+              <ul class="nav-menu">
+                <li><a href="../index.html">Головна</a></li>
+                <li><a href="../програма дисципліни/kiberbezpeka.html">Програма дисципліни</a></li>
+                <li><a href="../laction/laction.html">Лекції</a></li>
+                <li><a href="../lab.html">Лабораторні</a></li>
+                <li><a href="../saminar.html">Семінари</a></li>
+                <li><a href="../sr.html">Самостійні</a></li>
+                <li><a href="../pz.html">ПЗ</a></li>
+          </ul>
+        </div>
+        </nav>
+       
+  
+    <main>
+        <iframe src="Кібербезпека (Технології) КІ 2024-2.pdf"></iframe>
+    </main>
+    <footer>
+        &copy; 2025 Електронний підручник з кібербезпеки.
+    </footer>
+    <script>
+      function toggleMenu() {
+        const menu = document.querySelector('.nav-menu');
+        menu.classList.toggle('active');
+      }
+    </script>
+
+</body>
+</html>
